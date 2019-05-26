@@ -1,0 +1,1 @@
+Create Windows folders based on an imported CSV file, created security groups based on the folder names (R & RW), then apply the groups to the corresponding folders.
