@@ -1,10 +1,15 @@
-﻿# location of CSV file with 
+# root location to output folders to
 $Location = "D:\shared\data\"
+# location of CSV file with a list of desired folders to create
 $CsvLocation = "c:\dept.csv"
+
+$ set the current directory location
 Set-Location $Location
 
+$ import the cs file into the $Folders variable
 $Folders = Import-Csv $CsvLocation
 
+$ for every folder in the csv file:  create folder, create 2 AD groups, assign AD groups permissions to folder
 ForEach ($Folder in $Folders) { 
 
     # create folder if does not exist
